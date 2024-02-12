@@ -1,0 +1,1 @@
+This is my first personal website that I made as a fun project over a long weekend. I used html and css and followed along with a youtube video for some of the css. I am super excited with the result and hope to keep doing projects like this.
