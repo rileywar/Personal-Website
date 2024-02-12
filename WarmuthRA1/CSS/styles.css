@@ -1,0 +1,414 @@
+
+
+.myDiv {
+  border: 10px outset rgb(21, 140, 187);
+  background-color: rgb(217, 211, 211);
+  text-align: center;
+  width: 70%;
+  margin: auto;
+}
+.image{
+    width: 100%;
+    height: 70%;
+    
+}
+.header {
+
+position: fixed;
+text-align: center;
+background: transparent;
+top: 0;
+left: 0;
+width: 100%;
+display: flex;
+justify-content: space-between;
+
+z-index: 100;
+}
+span {
+background:rgb(91, 87, 87);
+color:white;
+font-size: 20px;
+text-align: center;
+font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background-color: #13294b;
+}
+
+.front-page{
+
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 70px 2% 0;
+  line-height: .3;
+
+
+}
+
+
+.front-page-content{
+max-width: 800px;
+margin-left: -30px;
+}
+
+.front-page-content h1 {
+  color: rgb(255, 255, 255);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  animation: slideRight 1s ease forwards;
+  animation-delay: .7s;
+  opacity: 0;
+  
+}
+
+.front-page-content h3 {
+  color: rgb(255, 255, 255);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 2s;
+  opacity: 0;
+  
+}
+
+.btn{
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height:48px;
+  background: blue;
+  font-size: 19px;
+  border-radius: 40px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 3s;
+  opacity: 0;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  inset: 0;
+  background: linear-gradient(45deg, #0077B5, white);
+  z-index: -1;
+  border-radius: 40px;
+  background-size: 200%;
+  background-position: 0 0;
+  filter: blur(5px);
+}
+
+.btn:hover::before{
+  background-position: 100% 0;
+  transition: .5s ease;
+}
+
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  inset: 0;
+  background: linear-gradient(45deg, #0077B5, white);
+  z-index: -1;
+  border-radius: 40px;
+  background-size: 200%;
+  transition:.5s ease;
+}
+
+.btn:hover::after{
+  background-position: 100%;
+
+}
+
+.linked-in-img{
+  width: 70%;
+  height: 250%;
+
+}
+
+
+.bio {
+  
+  font-size: 25px;
+  color: black;
+}
+
+h2 {
+  color: black;
+  font-size: 30px
+}
+
+.container {
+  padding: 25px;
+  width: max(300px, 80%);
+  margin: 10px auto;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 12px;
+  background-color: #0a0a0a;
+  height: 100px;
+}
+
+.menu-item{
+  border-radius: 4px;
+  cursor: pointer;
+  display:inline-block;
+  box-sizing: border-box;
+  margin-top: 1px;
+  padding: 10px 20px;
+  margin-left: 25px;
+  font-size: 20px;
+  
+}
+
+.menu-item:hover, .menu-item:focus{
+  
+  background: linear-gradient(45deg, #0077B5, white);
+  
+  
+}
+
+
+.menu {
+  
+  width: 100%;
+  list-style-type: none;
+  text-align: center;
+  opacity: 1;
+  animation: slideTop 1s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+  opacity: 0;
+ 
+
+}
+
+
+.item {
+  font-family: arial;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  
+}
+
+
+.front-page-image{
+width:410px;
+height:410px;
+opacity: 0;
+animation: slideTop 1s ease forwards, floatImage 4s ease-in-out infinite;
+animation-delay: 4.5s, 5s;
+
+}
+.front-page-image .glowing-circle{
+  position: relative;
+  width: 100%;
+  height:100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+.front-page-image .glowing-circle::after {
+  content: '';
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  background: #13294b;
+  border-radius: 50%;
+}
+
+.glowing-circle span {
+position: absolute;
+width: 100%;
+height: 100%;
+background: linear-gradient(#4b9cd3, #007fae, #e1e1e1);
+border-radius: 50%;
+animation: circleRotate 5s linear infinite;
+
+}
+
+.glowing-circle span:nth-child(1) {
+filter: blur(10px)
+}
+
+
+
+.glowing-circle .Riley{
+  position: relative;
+  width: 380px;
+  height: 380px;
+  z-index: 1;
+ border-radius: 50%; 
+ overflow: hidden;
+}
+
+
+.Riley img {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 350px;
+  object-fit: cover;
+  height: 500px
+}
+
+.About-Me{
+
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content:left;
+  padding: 100px 95px;
+  padding-top: -100px;
+  line-height: .3;
+
+
+}
+
+.About-Me-content{
+  max-width: 800px;
+  margin-left: -30px;
+  }
+
+
+.About-Me-Content h2 {
+  color: rgb(255, 255, 255);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  animation: slideRight 1s ease forwards;
+  animation-delay: .7s;
+  opacity: 0;
+  
+}
+
+.About-Me-Content p {
+  color: rgb(255, 255, 255);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1.5s;
+  opacity: 0;
+  line-height: 1.5;
+  max-width: 600px;
+  padding-top: 50px;
+}
+
+
+ .pics {
+  width:10px;
+height:10px;
+list-style-type: none;
+}
+
+.pic1 img{
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  max-width: 500px;
+  object-fit: cover;
+  height: 300px;
+  padding-left: 200px;
+  padding-top: 250px;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 2s;
+}
+
+.pic2 img{
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  max-width: 500px;
+  object-fit: cover;
+  height: 350px;
+  padding-left: 178px;
+  padding-top: 530px;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 2.5s;
+}
+
+.pic3 img{
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  max-width: 500px;
+  object-fit: cover;
+  height: 300px;
+  padding-left: 200px;
+  padding-top: 900px;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 3s;
+}
+
+
+
+@keyframes slideTop {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes floatImage {
+  0%{
+    transform: translateY(0);
+  }
+
+  50%{
+    transform: translateY(-24px);
+  }
+
+  100%{
+    transform: translateY(0);
+  }
+}
+
+@keyframes circleRotate {
+  0%{
+    transform: rotate(0);
+  }
+
+  100%{
+    transform: rotate(360deg);
+  }
+}
